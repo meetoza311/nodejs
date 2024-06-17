@@ -3,11 +3,11 @@ var bodyParser = require("body-parser");
 const path = require("path");
 const fileUpload = require("express-fileupload")
 var cors = require("cors");
-// const dotenvParseVariables = require('dotenv-parse-variables');
-// const { sequelize } = require("./app/models/index");
+const dotenvParseVariables = require('dotenv-parse-variables');
+const { sequelize } = require("./app/models/index");
 
-// let env = require('dotenv').config();
-// env = dotenvParseVariables(env.parsed);
+let env = require('dotenv').config();
+env = dotenvParseVariables(env.parsed);
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// const db = require("./app/models/index");
+const db = require("./app/models/index");
 const dir = path.join(__dirname, "uploads");
 app.use("/public", express.static(dir));
 
