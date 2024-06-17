@@ -25,13 +25,13 @@ const db = require("./app/models/index");
 const dir = path.join(__dirname, "uploads");
 app.use("/public", express.static(dir));
 
-// db.sequelize.sync();
+db.sequelize.sync();
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome user!" });
 });
 
-// require("./app/routes/users.routes")(app);
+require("./app/routes/users.routes")(app);
 
 var PORT = process.env.PORT || 8087;
 
