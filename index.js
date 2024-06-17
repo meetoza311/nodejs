@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
-const userRoutes = require('./routes/userRoutes'); // Correct path
+// const dotenv = require('dotenv');
+// const userRoutes = require('./routes/userRoutes'); // Correct path
 // const sequelize = require('./config/database');
-const authRoutes = require('./routes/authRoutes');
-const builderRoutes = require('./builderRoutes');
+// const authRoutes = require('./routes/authRoutes');
+// const builderRoutes = require('./builderRoutes');
 
-dotenv.config();
+// dotenv.config();
 
 const app = express();
 
